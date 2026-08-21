@@ -1,0 +1,110 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Mi página</title>
+  <link rel="stylesheet" href="assets/css/style.css"/>
+</head>
+
+<body class="bg-gray-950 text- min-h-screen">
+
+  <!-- Encabezado -->
+  <header class="text-center py-10 px-4">
+    <h1 class="text-4xl md:text-5xl font-bold text-cyan-400 mb-6">
+      Mi Portafolio
+    </h1>
+
+    <img
+      src="angel_foto.svg"
+      alt="Foto de Angel Gonzalez"
+      class="w-40 h-40 mx-auto rounded-full border-4 border-cyan-400"
+    >
+
+    <h2 class="text-3xl md:text-4xl font-semibold mt-6 text-white">
+      Angel Gonzalez
+    </h2>
+
+    <p class="text-gray-400 mt-2">
+      Desarrollador en formación
+    </p>
+  </header>
+
+  <!-- Proyectos -->
+  <main class="max-w-4xl mx-auto px-4 py-8">
+
+    <section id="portafolio">
+      <h2 class="text-3xl font-bold text-cyan-400 mb-6 text-center">
+        Proyectos
+      </h2>
+
+      <div class="grid md:grid-cols-2 gap-6">
+
+        <!-- Proyecto EcoFinance -->
+        <article class="bg-gray-900 border border-gray-800 rounded-xl p-6 shadow-lg hover:border-cyan-400 hover:-translate-y-1 transition duration-300">
+          <h3 class="text-xl font-bold mb-3 text-white">
+            EcoFinance
+          </h3>
+
+          <p class="text-gray-400 leading-relaxed">
+            Proyecto que implica un gestor de finanzas sostenibles,
+            permitiendo facilitar el control de ingresos y gastos de los usuarios.
+          </p>
+        </article>
+
+        <!-- Proyecto Hospital -->
+        <article class="bg-gray-900 border border-gray-800 rounded-xl p-6 shadow-lg hover:border-cyan-400 hover:-translate-y-1 transition duration-300">
+          <h3 class="text-xl font-bold mb-3 text-white">
+            Proyecto Hospital
+          </h3>
+
+          <p class="text-gray-400 leading-relaxed mb-5">
+            Proyecto desarrollado para DUOC UC.
+          </p>
+
+          <a
+            href="https://github.com/Angellssj/hospital-master"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="inline-block bg-cyan-500 hover:bg-cyan-400 text-gray-950 font-semibold px-5 py-2 rounded-lg transition duration-300"
+          >
+            Ver proyecto
+          </a>
+        </article>
+
+      </div>
+    </section>
+
+  </main>
+
+  <!-- Footer -->
+  <footer class="mt-12 bg-gray-900 border-t border-gray-800 py-8">
+    <nav class="text-center mb-6">
+      <ul class="flex justify-center gap-8">
+        <li>
+          <a href="#cv" class="text-gray-400 hover:text-cyan-400 transition">
+            CV
+          </a>
+        </li>
+
+        <li>
+          <a href="#portafolio" class="text-gray-400 hover:text-cyan-400 transition">
+            Portafolio
+          </a>
+        </li>
+
+        <li>
+          <a href="#contacto" class="text-gray-400 hover:text-cyan-400 transition">
+            Contacto
+          </a>
+        </li>
+      </ul>
+    </nav>
+
+    <p class="text-center text-gray-500 text-sm">
+      &copy; 2026 Angel Gonzalez. Todos los derechos reservados.
+    </p>
+  </footer>
+
+</body>
+</html>
