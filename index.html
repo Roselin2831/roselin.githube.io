@@ -1,32 +1,50 @@
 <!doctype html>
 <html lang="en">
+
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>Mi página</title>
-  <link rel="stylesheet" href="assets/css/style.css"/>
+  <link rel="stylesheet" href="assets/css/style.css" />
+
+
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4.3.3"></script>
+  <script src="assets/js/javascript.js"></script>
+
+  <style type="text/tailwindcss"> @custom-variant dark (&:where(.dark, .dark *));
+</style>
+
 </head>
 
-<body class="bg-gray-950 text- min-h-screen">
+<body
+  class="bg-gray-950 text-gray-300 min-h-screen min-h-screen bg-slate-100 px-4 py-10 font-sans text-slate-800 transition-colors duration-300 dark:bg-slate-900 dark:text-slate-100">
 
+  <div class="mx-auto mb-4 flex max-w-2xl justify-end">
+    <button id="boton-tema" onclick="cambiarTema()"
+      class="rounded-lg bg-slate-800 px-4 py-2 text-white hover:bg-slate-700 dark:bg-yellow-400 dark:text-slate-900">
+      🌙
+    </button>
+  </div>
+  <main
+    class="mx-auto max-w-2xl overflow-hidden rounded-2xl bg-white shadow-xl transition-colors duration-300 dark:bg-slate-800">
+  </main>
   <!-- Encabezado -->
+
   <header class="text-center py-10 px-4">
     <h1 class="text-4xl md:text-5xl font-bold text-cyan-400 mb-6">
       Mi Portafolio
     </h1>
 
-    <img
-      src="angel_foto.svg"
-      alt="Foto de Angel Gonzalez"
-      class="w-40 h-40 mx-auto rounded-full border-4 border-cyan-400"
-    >
+    <img src="./assets/img/fotoRoselinPerfil.png" alt="Foto de Angel Gonzalez"
+      class="w-40 h-40 mx-auto rounded-full border-4 border-cyan-400">
 
     <h2 class="text-3xl md:text-4xl font-semibold mt-6 text-white">
-      Angel Gonzalez
+      Roselín Verdú
     </h2>
 
-    <p class="text-gray-400 mt-2">
-      Desarrollador en formación
+    <p class="text-gray-400 mt-2 text-lg font-['times-new-roman']">
+      Ingeniera en Informática y Desarrolladora Web. Apasionada por la tecnología y la innovación, siempre en busca de
+      nuevos desafíos y oportunidades para crecer profesionalmente.
     </p>
   </header>
 
@@ -41,7 +59,8 @@
       <div class="grid md:grid-cols-2 gap-6">
 
         <!-- Proyecto EcoFinance -->
-        <article class="bg-gray-900 border border-gray-800 rounded-xl p-6 shadow-lg hover:border-cyan-400 hover:-translate-y-1 transition duration-300">
+        <article
+          class="bg-gray-900 border border-gray-800 rounded-xl p-6 shadow-lg hover:border-cyan-400 hover:-translate-y-1 transition duration-300">
           <h3 class="text-xl font-bold mb-3 text-white">
             EcoFinance
           </h3>
@@ -53,7 +72,8 @@
         </article>
 
         <!-- Proyecto Hospital -->
-        <article class="bg-gray-900 border border-gray-800 rounded-xl p-6 shadow-lg hover:border-cyan-400 hover:-translate-y-1 transition duration-300">
+        <article
+          class="bg-gray-900 border border-gray-800 rounded-xl p-6 shadow-lg hover:border-cyan-400 hover:-translate-y-1 transition duration-300">
           <h3 class="text-xl font-bold mb-3 text-white">
             Proyecto Hospital
           </h3>
@@ -62,12 +82,8 @@
             Proyecto desarrollado para DUOC UC.
           </p>
 
-          <a
-            href="https://github.com/Angellssj/hospital-master"
-            target="_blank"
-            rel="noopener noreferrer"
-            class="inline-block bg-cyan-500 hover:bg-cyan-400 text-gray-950 font-semibold px-5 py-2 rounded-lg transition duration-300"
-          >
+          <a href="https://github.com/Angellssj/hospital-master" target="_blank" rel="noopener noreferrer"
+            class="inline-block bg-cyan-500 hover:bg-cyan-400 text-gray-950 font-semibold px-5 py-2 rounded-lg transition duration-300">
             Ver proyecto
           </a>
         </article>
@@ -77,34 +93,102 @@
 
   </main>
 
-  <!-- Footer -->
-  <footer class="mt-12 bg-gray-900 border-t border-gray-800 py-8">
-    <nav class="text-center mb-6">
-      <ul class="flex justify-center gap-8">
-        <li>
-          <a href="#cv" class="text-gray-400 hover:text-cyan-400 transition">
-            CV
-          </a>
-        </li>
+  <main
+    class="mx-auto max-w-2xl overflow-hidden rounded-2xl bg-white shadow-xl transition-colors duration-300 dark:bg-slate-800 ">
+    <form class="space-y-6 px-8 py-8" action="#" method="post" id="formulario-contacto"
+      onsubmit="return validarFormulario()">
+      <div class="grid gap-6 sm:grid-cols-2">
+        <div>
+          <label for="nombre" class="mb-2 block text-sm font-medium">
+            Nombre
+          </label>
+          <input id="nombre" name="nombre" type="text" required placeholder="Tu nombre"
+            class="w-full rounded-lg border border-slate-300 px-4 py-3 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100" />
+        </div>
 
-        <li>
-          <a href="#portafolio" class="text-gray-400 hover:text-cyan-400 transition">
-            Portafolio
-          </a>
-        </li>
+        <div>
+          <label for="apellido" class="mb-2 block text-sm font-medium">
+            Apellido
+          </label>
+          <input id="apellido" name="apellido" type="text" required placeholder="Tu apellido"
+            class="w-full rounded-lg border border-slate-300 px-4 py-3 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100" />
+        </div>
+      </div>
 
-        <li>
-          <a href="#contacto" class="text-gray-400 hover:text-cyan-400 transition">
-            Contacto
-          </a>
-        </li>
-      </ul>
-    </nav>
+      <div>
+        <label for="email" class="mb-2 block text-sm font-medium">
+          Correo electrónico
+        </label>
+        <input id="email" name="email" type="email" required placeholder="correo@ejemplo.com"
+          class="w-full rounded-lg border border-slate-300 px-4 py-3 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100" />
+      </div>
 
-    <p class="text-center text-gray-500 text-sm">
-      &copy; 2026 Angel Gonzalez. Todos los derechos reservados.
-    </p>
-  </footer>
+      <div>
+        <label for="asunto" class="mb-2 block text-sm font-medium">
+          Asunto
+        </label>
+        <select id="asunto" name="asunto" required
+          class="w-full rounded-lg border border-slate-300 bg-white px-4 py-3 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100">
+          <option value="" disabled selected>Selecciona una opción</option>
+          <option>Consulta general</option>
+          <option>Soporte técnico</option>
+          <option>Solicitud de información</option>
+        </select>
+      </div>
+
+      <div>
+        <label for="mensaje" class="mb-2 block text-sm font-medium">
+          Mensaje
+        </label>
+        <textarea id="mensaje" name="mensaje" rows="5" required placeholder="Escribe tu mensaje aquí..."
+          class="w-full resize-none rounded-lg border border-slate-300 px-4 py-3 outline-none transition focus:border-indigo-500 focus:ring-4 focus:ring-indigo-100"></textarea>
+      </div>
+
+      <label class="flex cursor-pointer items-start gap-3 text-sm text-slate-600">
+        <input type="checkbox" required
+          class="mt-1 h-4 w-4 rounded border-slate-300 text-indigo-600 focus:ring-indigo-500" />
+
+      </label>
+
+      <button type="submit"
+        class="w-full rounded-lg bg-indigo-600 px-5 py-3 font-semibold text-white transition hover:bg-indigo-700 focus:outline-none focus:ring-4 focus:ring-indigo-200">
+        Enviar mensaje
+      </button>
+
+    </form>
+
+
+    <!-- Footer -->
+    <footer class="mt-12 bg-gray-900 border-t border-gray-800 py-8">
+      <nav class="text-center mb-6">
+        <ul class="flex justify-center gap-8">
+          <li>
+            <a href="#cv" class="text-gray-400 hover:text-cyan-400 transition">
+              CV
+            </a>
+          </li>
+
+          <li>
+            <a href="#portafolio" class="text-gray-400 hover:text-cyan-400 transition">
+              Portafolio
+            </a>
+          </li>
+
+          <li>
+            <a href="#contacto" class="text-gray-400 hover:text-cyan-400 transition">
+              Contacto
+            </a>
+          </li>
+        </ul>
+      </nav>
+      <p class="text-center text-gray-500 text-sm">Acepto el tratamiento de mis datos personales.</p>
+
+      <p class="text-center text-gray-500 text-sm">
+        &copy; 2026 Angel Gonzalez. Todos los derechos reservados.
+      </p>
+    </footer>
+
 
 </body>
+
 </html>
